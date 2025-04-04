@@ -1,10 +1,13 @@
+//import api key from apikey.js file
+import WEATHER_API_KEY from "./apikey";
+
 // WEATHER APP
 // querySelector returns the first element with the class. Since we only have the one class this works. 
    // if using ID's || using more than one (card for instance) need to update DOM elements
    const weatherForm = document.querySelector(".weatherForm");
    const cityInput = document.querySelector(".cityInput");
    const card = document.querySelector(".card");
-   const apiKey = "";
+   const apiKey = WEATHER_API_KEY; 
    
    
    

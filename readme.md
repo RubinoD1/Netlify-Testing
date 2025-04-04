@@ -9,9 +9,9 @@ https://aesthetic-dusk-5d6d31.netlify.app/
 - In the apikey.js file add the following code (insert api key as the  const value):
 
 ```
-const WEATHER_API_Key = "";
+const WEATHER_API_KEY = "";
 
-export default WEATHER_API_Key; 
+export default WEATHER_API_KEY; 
 ```
 
 - Create a JS file called dataFunctions.js
@@ -48,4 +48,4 @@ The '>" symbol then the file name we want to create with the contents the way we
 cd assets && cd js && echo -e "const WEATHER_API_KEY = ''\n\nexport default WEATHER_API_KEY;" > apikey.js
 ```
 
-cd assets &&
+** 

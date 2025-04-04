@@ -1,5 +1,7 @@
 # Netlify Deployment / API key steps 
 
+https://aesthetic-dusk-5d6d31.netlify.app/
+
 - (.gitignore): add apikey.js to .gitignore file. 
 
 - Create a js file called apikey.js

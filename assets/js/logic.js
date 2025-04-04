@@ -1,4 +1,4 @@
-import WEATHER_API_KEY from "./apikey";
+import { WEATHER_API_KEY } from './apikey.js';
 
 // WEATHER APP
 // querySelector returns the first element with the class. Since we only have the one class this works. 

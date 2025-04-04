@@ -1,4 +1,3 @@
-//import api key from apikey.js file
 import WEATHER_API_KEY from "./apikey";
 
 // WEATHER APP
@@ -7,7 +6,7 @@ import WEATHER_API_KEY from "./apikey";
    const weatherForm = document.querySelector(".weatherForm");
    const cityInput = document.querySelector(".cityInput");
    const card = document.querySelector(".card");
-   const apiKey = WEATHER_API_KEY; 
+// const apiKey = WEATHER_API_KEY; 
    
    
    
@@ -45,7 +44,7 @@ import WEATHER_API_KEY from "./apikey";
    
    async function getWeatherData(city){
       //The url will be passed to the fetch function
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}`;
       //wait for response
       const response = await fetch(apiUrl);
    

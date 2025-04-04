@@ -40,3 +40,10 @@ the \n\n is two line breaks.
 
 The '>" symbol then the file name we want to create with the contents the way we want -- making a copy of apikey.js 
 
+- Netlify Build command section of deployment: add api key to ''
+
+```
+cd assets && cd js && echo -e "const WEATHER_API_KEY = ''\n\nexport default WEATHER_API_KEY;" > apikey.js
+```
+
+cd assets &&

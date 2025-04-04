@@ -1,5 +1,7 @@
 # Netlify Deployment / API key steps 
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6391588c-0ff1-4c65-a822-43fb5854ab73/deploy-status)](https://app.netlify.com/sites/aesthetic-dusk-5d6d31/deploys)
+
 https://aesthetic-dusk-5d6d31.netlify.app/
 
 - (.gitignore): add apikey.js to .gitignore file. 
@@ -45,7 +47,7 @@ The '>" symbol then the file name we want to create with the contents the way we
 - Netlify Build command section of deployment: add api key to ''
 
 ```
-cd assets && cd js && echo -e "const WEATHER_API_KEY = ''\n\nexport default WEATHER_API_KEY;" > apikey.js
+cd assets && cd js && echo -e "const WEATHER_API_KEY = '';\n\nexport default WEATHER_API_KEY;" > apikey.js
 ```
 
 ** 

@@ -1,0 +1,46 @@
+Netlify 
+
+Netlify Markdown icon: 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6391588c-0ff1-4c65-a822-43fb5854ab73/deploy-status)](https://app.netlify.com/sites/aesthetic-dusk-5d6d31/deploys)
+
+Steps 
+
+    • (HTML) In the HTML file add type=”module” to the JS file script tag: 
+
+<script type="module" src="./assets/js/logic.js"></script>
+
+    • (.gitignore) Add the name of the JS file containing the api key var (apikey.js) to the .gitignore file. 
+
+    • Create a JS file that will contain the API key (apikey.js)
+        ◦  In the JS file add the following code (insert the api key value as the const value): 
+    
+    ```
+const WEATHER_API_KEY = “”;
+
+export default WEATHER_API_KEY;
+
+```
+
+    • In the JS file that will be using the API key add the following code to the top of the file: 
+
+```
+import WEATHER_API_KEY from ‘./apikey.js’;
+```
+
+    • On the Netlify website in the deployment section for the site add the following to the Build Command section in deployment settings: 
+
+```
+cd assets && cd js && echo -e “const WEATHER_API_KEY = ‘ADD API KEY VALUE HERE’;\n\nexport default WEATHER_API_KEY;” > apikey.js
+
+```
+The build command is creating the JS file that is hidden with the .gitignore file preventing the API key from being visible in the GitHub repo. 
+
+** The key will still be visible in the dev tools under the source menu as the file will be visible when the site loads **
+
+Build command breakdown: 
+
+    • cd assets && cd js: Tells Netlify to switch to the assets folder and then to the js folder where we want the file to be created. 
+    • echo -e: tells the BASH terminal to pay attention to some line breaks we are going to put in the string. 
+    • \n\n: is two line breaks. 
+    • The > symbol (greater than) than the name of the file we want to create apikey.js  
